@@ -10,7 +10,7 @@ const SignIn = ()=>{
         const [password,setPassword] = useState("")
         const [email,setEmail] = useState("")
         const PostData = ()=>{
-            console.log(email,password)
+            // console.log(email,password)
             if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
                 M.toast({html: "invalid email",classes:"#c62828 red darken-3"})
                 return 
@@ -26,7 +26,7 @@ const SignIn = ()=>{
                 })
             }).then(res=>res.json())
             .then(data=>{
-                console.log(data)
+                // console.log(data)
                 if(data.error){
                     M.toast({html: data.error,classes:"#c62828 red darken-3"})
                 }
@@ -59,10 +59,18 @@ const SignIn = ()=>{
                 onChange={(e)=>setPassword(e.target.value)}
                 />
                 <button className="btn waves-effect waves-light #64b5f6 blue darken-1" 
-                onClick={()=>PostData()}
+                onClick={()=>PostData("login")}
                 >
                     Login
                 </button>
+                {/* <button className="btn waves-effect waves-light #64b5f6 blue darken-1" 
+                onClick={()=>{
+                    PostData()
+                }}
+                >
+                    快速測試Login
+                </button> */}
+                <div>測試帳號 yale918@gmail.com / 12345</div>
                 <h5>
                     <Link to="/signup">Don't have an account ?</Link>
                 </h5>

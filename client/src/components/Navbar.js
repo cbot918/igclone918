@@ -60,7 +60,7 @@ const NavBar = () => {
       <div className="nav-wrapper white" >
         <Link to={state ? "/" : "/signin"} className="brand-logo left">
           SheepCloud
-          {console.log("********** in Navbar.js conditioning **************")}
+          {/* {console.log("********** in Navbar.js conditioning **************")} */}
         </Link>
         <ul id="nav-mobile" className="right ">
           {renderList()}
