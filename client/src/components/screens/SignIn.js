@@ -70,7 +70,7 @@ const SignIn = ()=>{
                 >
                     快速測試Login
                 </button> */}
-                <div>測試帳號 yale918@gmail.com / 12345</div>
+                {/* <div>測試帳號 yale918@gmail.com / 12345</div> */}
                 <h5>
                     <Link to="/signup">Don't have an account ?</Link>
                 </h5>
